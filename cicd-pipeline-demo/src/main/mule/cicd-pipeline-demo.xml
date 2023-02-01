@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="6a72d6d6-9998-4ade-8df3-45952c04949c" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="cicd-pipeline-demoFlow" doc:id="a325ba81-2bd7-48b3-8827-f35d88becf26" >
+		<http:listener doc:name="Listener" doc:id="60316aef-bf92-4a8d-8d1c-fb9f1e84217a" config-ref="HTTP_Listener_config" path="/cicd-test"/>
+		<set-payload value='#[output application/json&#10;---&#10;{&#10;	"ID": 9,&#10;    "code": "eefd3000",&#10;    "price": 900,&#10;    "departureDate": "2016-02-01T00:00:00",&#10;    "origin": "MUA",&#10;    "destination": "SFO",&#10;    "emptySeats": 0,&#10;    "plane": {&#10;      "type": "Boeing 737",&#10;      "totalSeats": 150&#10;    }&#10;}]' doc:name="Set Payload" doc:id="0cd907cb-0138-4c90-b754-fc795543c0fe" />
+		<logger level="INFO" doc:name="Logger" doc:id="1b5d10c6-34d2-4d22-b774-cbf1ae1c14ad" message="Succeful upload #[payload]"/>
+	</flow>
+</mule>
