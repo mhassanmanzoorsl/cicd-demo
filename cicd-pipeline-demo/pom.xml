@@ -91,31 +91,31 @@
 		</repository>
 		
 		<!--added for AzureDevOps-->
-		<repository>
-                   <id>MuleSoft</id>
-                   <url>https://pkgs.dev.azure.com/mhassanmanzoor/MuleSoft/_packaging/MuleSoft/maven/v1</url>
-                   <releases>
-                      <enabled>true</enabled>
-                   </releases>
-                   <snapshots>
-                     <enabled>true</enabled>
-                   </snapshots>
-                </repository>
+<repository>
+  <id>mulesoft_demo</id>
+  <url>https://pkgs.dev.azure.com/mhassanmanzoor/_packaging/mulesoft_demo/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
 		<!--added for AzureDevOps-->
 	</repositories>
 	
 	<!--added for AzureDevOps-->
         <distributionManagement>
-		<repository>
-                   <id>MuleSoft</id>
-                   <url>https://pkgs.dev.azure.com/mhassanmanzoor/MuleSoft/_packaging/MuleSoft/maven/v1</url>
-                   <releases>
-                      <enabled>true</enabled>
-                   </releases>
-                   <snapshots>
-                     <enabled>true</enabled>
-                   </snapshots>
-                </repository>
+<repository>
+  <id>mulesoft_demo</id>
+  <url>https://pkgs.dev.azure.com/mhassanmanzoor/_packaging/mulesoft_demo/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
 	</distributionManagement>
         <!--added for AzureDevOps-->
 	<pluginRepositories>
